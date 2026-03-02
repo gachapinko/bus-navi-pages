@@ -661,3 +661,10 @@ init();
 </script>
 </body>
 </html>
+
+// ページ読み込み時にURLの#を見てタブを切り替える
+window.addEventListener('load', function() {
+  if (location.hash === '#timetable') {
+    setTab(2, document.querySelectorAll('.tab-btn')[2]);
+  }
+});
